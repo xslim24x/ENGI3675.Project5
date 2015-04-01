@@ -13,5 +13,18 @@ namespace UserLogin
         {
 
         }
+
+        protected void Button_Insert(object sender, EventArgs e)
+        {
+            Stored_Procedure db = new Stored_Procedure();
+            var item = new Model_Table();
+
+            item.username = Username.Text;
+            item.password = Password.Text;
+
+            Stored_Procedure.INSERT(item);
+
+
+        }
     }
 }
