@@ -16,7 +16,11 @@ namespace UserLogin
         {
             NameValueCollection nvc = Request.Form;
             if (ServerConn.Authenticated(nvc["username"], nvc["password"]))
-                postresults.InnerText = "<h1> Authenticated!</h1>";   
+            {
+                postresults.InnerHtml = "<h1> Authenticated!</h1>";
+            }
+
+                
         }
 
     }
