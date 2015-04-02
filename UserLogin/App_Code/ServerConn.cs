@@ -70,7 +70,7 @@ namespace UserLogin.App_Code.ServerConn
 
                     MD5 crypter = MD5.Create();
                     
-                    byte[] hashed = crypter.ComputeHash(System.Text.Encoding.ASCII.GetBytes(password));
+                    byte[] hashed = crypter.ComputeHash(System.Text.Encoding.Default.GetBytes(password));
 
                     cmd.Parameters.Add(
                         new NpgsqlParameter("hashedpass", NpgsqlTypes.NpgsqlDbType.Bytea) { Value = hashed });
@@ -94,21 +94,18 @@ namespace UserLogin.App_Code.ServerConn
                 try
                 {
                     conn.Open();
-                    string sql = "SELECT * FROM public.\"systemusers\" WHERE username=:user & hashedpass=:pass;";
+                    string sql = "SELECT * FROM public.\"systemusers\" WHERE username=:user";
                     NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
 
                     cmd.Parameters.Add(
                         new NpgsqlParameter("user", NpgsqlTypes.NpgsqlDbType.Text) { Value = name });
-
-                    cmd.Parameters.Add(
-                        new NpgsqlParameter("pass", NpgsqlTypes.NpgsqlDbType.Bytea) { Value = System.Text.Encoding.ASCII.GetBytes(password) });
-
+                    
                     NpgsqlDataReader dr = cmd.ExecuteReader();
 
                     DataTable dt = new DataTable();
                     dt.Load(dr);
-
-                    if (dt.Rows.Count == 1)
+                    string test = System.Text.Encoding.Default.GetString((byte[])dt.Rows[0]["hashedpass"],0,16);
+                    if ( test.Equals(password))
                         return true;
                 }
                 catch (Exception e)
