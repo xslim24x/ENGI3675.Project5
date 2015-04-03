@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// <copyright file="AssemblyInfo.cs" company="Lakehead">
+// Lakehead.com. All rights reserved.
+// </copyright>
+// <author>Slim and Leví</author>
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

@@ -10,7 +10,7 @@
 namespace UserLogin {
     
     
-    public partial class login {
+    public partial class Login {
         
         /// <summary>
         /// loginform control.

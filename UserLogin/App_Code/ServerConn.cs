@@ -48,12 +48,11 @@ namespace UserLogin.App_Code.ServerConn
             return dt;
         }
 
-
         /// <summary>
         /// Function utilizing a prepared query to insert data into database
         /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="name">  Creating Username </param>
+        /// <param name="password"> Creating password </param>
         public static void SafeAdd(string name, string password)
         {
             using (NpgsqlConnection conn = new NpgsqlConnection(
@@ -86,6 +85,12 @@ namespace UserLogin.App_Code.ServerConn
             }
         }
 
+        /// <summary>
+        /// Authentication method . 
+        /// </summary>
+        /// <param name="name"> Authenticating Username</param>
+        /// <param name="password"> Authenticating Password</param>
+        /// <returns> String name and String Password</returns>
         public static bool Authenticated(string name, string password)
         {
             using (NpgsqlConnection conn = new NpgsqlConnection(
@@ -103,16 +108,19 @@ namespace UserLogin.App_Code.ServerConn
 
                     DataTable dt = new DataTable();
                     dt.Load(dr);
-                    string shouldbethis = BitConverter.ToString((byte[])dt.Rows[0]["hashedpass"]).Replace("-","");
-                    
+                    string shouldbethis = BitConverter.ToString((byte[])dt.Rows[0]["hashedpass"]).Replace("-", string.Empty);
+
                     if (shouldbethis.Equals(password.ToUpper()))
+                    { 
                         return true;
+                    }
                 }
                 catch (Exception e)
                 {
                     Debug.WriteLine(e);
                 }
             }
+
             return false;
         }
     }

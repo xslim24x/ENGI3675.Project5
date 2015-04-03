@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
     <div>
         <header>Username:</header>
-        <asp:TextBox runat="server"  ID ="Username" value="" TextMode="SingleLine" ></asp:TextBox>
+        <asp:TextBox runat="server"  ID ="Username"  TextMode="SingleLine" ></asp:TextBox>
         <header>Password:</header>
-        <asp:TextBox runat="server"  ID ="Password" value="" TextMode="Password"></asp:TextBox>
+        <asp:TextBox runat="server"  ID ="Password"  TextMode="Password"></asp:TextBox>
         <asp:Button runat="server"   ID ="button_insert" Text="Create User" OnClick="Button_Insert" />
      </div>
     </form>
