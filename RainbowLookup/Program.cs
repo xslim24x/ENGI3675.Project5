@@ -14,9 +14,10 @@ namespace RainbowLookup
         static void Main(string[] args)
         {
             MD5 crypter = MD5.Create();
-
+            string hash = string.Empty;
             Console.WriteLine("Enter a password hash:");
-            string hash = Console.ReadLine();
+            while(hash.Length==0)
+                hash = Console.ReadLine();
 
             string[] passdictionary = System.IO.File.ReadAllLines(@"C:\Users\Slim\Documents\Visual Studio 2013\Projects\Project 5 - ENGI3675\ENGI3675.Project5\RainbowLookup\passwordlist.txt");
             bool found = false;
