@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="74b20874-0e25-478b-97c9-9442d4e22523" Title="UserLogin" Url="html/d9fa203c-1a5b-1bd2-60b6-af0d6b0418f6.htm">
+    <HelpTOCNode Id="b57af63b-8e11-4b4b-94a5-c63e14f3ee10" Title="index Class" Url="html/cd321c01-7443-7ba4-34f4-fea3e15cbd04.htm">
+      <HelpTOCNode Title="index Constructor " Url="html/d5873473-e0f2-622c-0f66-2063f6c10a32.htm" />
+      <HelpTOCNode Id="a8affdd7-abb6-4f7b-8a32-274b459e8fc4" Title="index Fields" Url="html/4b41039f-d063-90c6-6045-64d9e3c76537.htm">
+        <HelpTOCNode Title="button_insert Field" Url="html/5b1607f7-9d57-a0c2-f2bb-6f51447ae35e.htm" />
+        <HelpTOCNode Title="form1 Field" Url="html/0eab478e-7478-1472-6273-1520d78242e4.htm" />
+        <HelpTOCNode Title="Password Field" Url="html/e619ae1c-cd73-9f64-7360-7972e77dac03.htm" />
+        <HelpTOCNode Title="Username Field" Url="html/55753c48-9512-ffa2-e027-d8d15eeb51fe.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3a249508-e2fd-486d-b954-9170efe1bd37" Title="index Methods" Url="html/31d8b172-2898-19ff-2314-19b7fae9bff6.htm">
+        <HelpTOCNode Title="Button_Insert Method " Url="html/4c3cc3fb-edc1-b76e-68ad-0be63f07927c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="index Properties" Url="html/bdcdd711-3fbd-316a-4559-6c54c11864c7.htm" />
+      <HelpTOCNode Title="index Events" Url="html/1400b388-905f-1ad0-109c-18857cd24a6a.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="fbc4e0d8-835f-44b4-a2ba-a41ba37a6d11" Title="Login Class" Url="html/b26625f8-7e49-888b-2697-b79461ffc0ec.htm">
+      <HelpTOCNode Title="Login Constructor " Url="html/d9e32afd-9ac1-9393-99b0-c33ca1e08aff.htm" />
+      <HelpTOCNode Id="78948e96-a0bb-4e81-aada-fbc3f117f2e6" Title="Login Fields" Url="html/af67f430-e1b2-50d3-0582-bd64c5a78e1c.htm">
+        <HelpTOCNode Title="loginform Field" Url="html/92caa1a8-2675-ddc1-2eea-e46d50312cc2.htm" />
+        <HelpTOCNode Title="password Field" Url="html/0fdeeec8-3f03-5f48-17b2-3413030689cd.htm" />
+        <HelpTOCNode Title="postresults Field" Url="html/f884f6a0-9ae0-1617-ae06-ed70c5ad7cee.htm" />
+        <HelpTOCNode Title="username Field" Url="html/550630d0-d0e5-849d-305b-e8d1fb6f5dab.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0131fbfb-768d-4fb1-bcc2-37d58ad78ba6" Title="Login Methods" Url="html/8b30edcc-5cec-1bce-fe25-55299f444782.htm">
+        <HelpTOCNode Title="Page_Load Method " Url="html/e20887d5-ed11-bc62-896b-f5dc45746464.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Login Properties" Url="html/bf97425c-c34a-461c-1807-4efe1295065e.htm" />
+      <HelpTOCNode Title="Login Events" Url="html/4945c020-b743-f371-bfd3-d3c3721bcb54.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="44a2624b-9cc2-4e82-ade1-7102230375ef" Title="UserLogin.App_Code.ServerConn" Url="html/ed9cab1c-6240-449d-764e-52622be08fbe.htm">
+    <HelpTOCNode Id="6481be65-4191-4d69-8c1e-211c6074c93d" Title="ServerConn Class" Url="html/fedd6130-df10-582b-e35c-083bac18bac8.htm">
+      <HelpTOCNode Id="90dfcefc-6c4e-4486-b240-df4239e4d237" Title="ServerConn Methods" Url="html/20491b21-550c-55fc-0a51-2b9a2594384d.htm">
+        <HelpTOCNode Title="Authenticated Method " Url="html/25e41fb8-4e7b-2a66-d205-c054be6c6f75.htm" />
+        <HelpTOCNode Title="MyQuery Method " Url="html/495ad544-efb2-66f5-9423-b095e2249ecb.htm" />
+        <HelpTOCNode Title="SafeAdd Method " Url="html/9167ec67-3520-5e6d-cf66-75ec2e81af28.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

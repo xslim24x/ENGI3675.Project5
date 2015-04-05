@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Authenticated method" Url="html/25e41fb8-4e7b-2a66-d205-c054be6c6f75.htm" />
+  <HelpKINode Title="button_insert field" Url="html/5b1607f7-9d57-a0c2-f2bb-6f51447ae35e.htm" />
+  <HelpKINode Title="Button_Insert method" Url="html/4c3cc3fb-edc1-b76e-68ad-0be63f07927c.htm" />
+  <HelpKINode Title="form1 field" Url="html/0eab478e-7478-1472-6273-1520d78242e4.htm" />
+  <HelpKINode Title="index class">
+    <HelpKINode Title="index Class" Url="html/cd321c01-7443-7ba4-34f4-fea3e15cbd04.htm" />
+    <HelpKINode Title="about index class" Url="html/cd321c01-7443-7ba4-34f4-fea3e15cbd04.htm" />
+    <HelpKINode Title="constructor" Url="html/d5873473-e0f2-622c-0f66-2063f6c10a32.htm" />
+    <HelpKINode Title="events" Url="html/1400b388-905f-1ad0-109c-18857cd24a6a.htm" />
+    <HelpKINode Title="fields" Url="html/4b41039f-d063-90c6-6045-64d9e3c76537.htm" />
+    <HelpKINode Title="methods" Url="html/31d8b172-2898-19ff-2314-19b7fae9bff6.htm" />
+    <HelpKINode Title="properties" Url="html/bdcdd711-3fbd-316a-4559-6c54c11864c7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="index.button_insert field" Url="html/5b1607f7-9d57-a0c2-f2bb-6f51447ae35e.htm" />
+  <HelpKINode Title="index.Button_Insert method" Url="html/4c3cc3fb-edc1-b76e-68ad-0be63f07927c.htm" />
+  <HelpKINode Title="index.form1 field" Url="html/0eab478e-7478-1472-6273-1520d78242e4.htm" />
+  <HelpKINode Title="index.index constructor" Url="html/d5873473-e0f2-622c-0f66-2063f6c10a32.htm" />
+  <HelpKINode Title="index.Password field" Url="html/e619ae1c-cd73-9f64-7360-7972e77dac03.htm" />
+  <HelpKINode Title="index.Username field" Url="html/55753c48-9512-ffa2-e027-d8d15eeb51fe.htm" />
+  <HelpKINode Title="Login class">
+    <HelpKINode Title="Login Class" Url="html/b26625f8-7e49-888b-2697-b79461ffc0ec.htm" />
+    <HelpKINode Title="about Login class" Url="html/b26625f8-7e49-888b-2697-b79461ffc0ec.htm" />
+    <HelpKINode Title="constructor" Url="html/d9e32afd-9ac1-9393-99b0-c33ca1e08aff.htm" />
+    <HelpKINode Title="events" Url="html/4945c020-b743-f371-bfd3-d3c3721bcb54.htm" />
+    <HelpKINode Title="fields" Url="html/af67f430-e1b2-50d3-0582-bd64c5a78e1c.htm" />
+    <HelpKINode Title="methods" Url="html/8b30edcc-5cec-1bce-fe25-55299f444782.htm" />
+    <HelpKINode Title="properties" Url="html/bf97425c-c34a-461c-1807-4efe1295065e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Login.Login constructor" Url="html/d9e32afd-9ac1-9393-99b0-c33ca1e08aff.htm" />
+  <HelpKINode Title="Login.loginform field" Url="html/92caa1a8-2675-ddc1-2eea-e46d50312cc2.htm" />
+  <HelpKINode Title="Login.Page_Load method" Url="html/e20887d5-ed11-bc62-896b-f5dc45746464.htm" />
+  <HelpKINode Title="Login.password field" Url="html/0fdeeec8-3f03-5f48-17b2-3413030689cd.htm" />
+  <HelpKINode Title="Login.postresults field" Url="html/f884f6a0-9ae0-1617-ae06-ed70c5ad7cee.htm" />
+  <HelpKINode Title="Login.username field" Url="html/550630d0-d0e5-849d-305b-e8d1fb6f5dab.htm" />
+  <HelpKINode Title="loginform field" Url="html/92caa1a8-2675-ddc1-2eea-e46d50312cc2.htm" />
+  <HelpKINode Title="MyQuery method" Url="html/495ad544-efb2-66f5-9423-b095e2249ecb.htm" />
+  <HelpKINode Title="Page_Load method" Url="html/e20887d5-ed11-bc62-896b-f5dc45746464.htm" />
+  <HelpKINode Title="Password field" Url="html/e619ae1c-cd73-9f64-7360-7972e77dac03.htm" />
+  <HelpKINode Title="password field" Url="html/0fdeeec8-3f03-5f48-17b2-3413030689cd.htm" />
+  <HelpKINode Title="postresults field" Url="html/f884f6a0-9ae0-1617-ae06-ed70c5ad7cee.htm" />
+  <HelpKINode Title="SafeAdd method" Url="html/9167ec67-3520-5e6d-cf66-75ec2e81af28.htm" />
+  <HelpKINode Title="ServerConn class">
+    <HelpKINode Title="ServerConn Class" Url="html/fedd6130-df10-582b-e35c-083bac18bac8.htm" />
+    <HelpKINode Title="about ServerConn class" Url="html/fedd6130-df10-582b-e35c-083bac18bac8.htm" />
+    <HelpKINode Title="methods" Url="html/20491b21-550c-55fc-0a51-2b9a2594384d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ServerConn.Authenticated method" Url="html/25e41fb8-4e7b-2a66-d205-c054be6c6f75.htm" />
+  <HelpKINode Title="ServerConn.MyQuery method" Url="html/495ad544-efb2-66f5-9423-b095e2249ecb.htm" />
+  <HelpKINode Title="ServerConn.SafeAdd method" Url="html/9167ec67-3520-5e6d-cf66-75ec2e81af28.htm" />
+  <HelpKINode Title="UserLogin namespace" Url="html/d9fa203c-1a5b-1bd2-60b6-af0d6b0418f6.htm" />
+  <HelpKINode Title="UserLogin.App_Code.ServerConn namespace" Url="html/ed9cab1c-6240-449d-764e-52622be08fbe.htm" />
+  <HelpKINode Title="UserLogin.App_Code.ServerConn.ServerConn class" Url="html/fedd6130-df10-582b-e35c-083bac18bac8.htm" />
+  <HelpKINode Title="UserLogin.index class" Url="html/cd321c01-7443-7ba4-34f4-fea3e15cbd04.htm" />
+  <HelpKINode Title="UserLogin.Login class" Url="html/b26625f8-7e49-888b-2697-b79461ffc0ec.htm" />
+  <HelpKINode Title="Username field" Url="html/55753c48-9512-ffa2-e027-d8d15eeb51fe.htm" />
+  <HelpKINode Title="username field" Url="html/550630d0-d0e5-849d-305b-e8d1fb6f5dab.htm" />
+</HelpKI>

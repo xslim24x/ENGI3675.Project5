@@ -86,7 +86,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\User.cs" />
     <Compile Include="App_Code\ServerConn.cs" />
     <Compile Include="adduser.aspx.cs">
       <DependentUpon>adduser.aspx</DependentUpon>
