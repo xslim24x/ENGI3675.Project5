@@ -24,5 +24,6 @@
     </div>
     </form>
     <div id="postresults" runat="server"></div>
+    <div id="DivHash" runat="server"></div>
 </body>
 </html>

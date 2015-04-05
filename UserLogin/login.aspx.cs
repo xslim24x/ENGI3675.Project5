@@ -27,10 +27,14 @@ namespace UserLogin
         protected void Page_Load(object sender, EventArgs e)
         {
             NameValueCollection nvc = Request.Form;
+            if (nvc.Count>1)
+            {
             if (ServerConn.Authenticated(nvc["username"], nvc["password"]))
             {
-                this.postresults.InnerHtml = "<h1> Authenticated!</h1>";
-            }        
+                    postresults.InnerHtml = "<h1> Authenticated!</h1>";
+                    DivHash.InnerText = ServerConn.MyQuery("Select * from systemusers where username=" + nvc["username"].ToString() + ";").ToString();
+            }
+            }
         }
     }
 }
