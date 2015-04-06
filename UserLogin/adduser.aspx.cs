@@ -5,17 +5,12 @@
 namespace UserLogin
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
     using UserLogin.App_Code.ServerConn;
   
     /// <summary>
-    /// Public class index
+    /// Public class AddUser
     /// </summary>
-    public partial class index : System.Web.UI.Page
+    public partial class AddUser : System.Web.UI.Page
     {     
         /// <summary>
         /// It's giving the action the the Button_Insert used in the ASP page
@@ -24,7 +19,7 @@ namespace UserLogin
         /// <param name="e"> EventArgs e </param>
         protected void Button_Insert(object sender, EventArgs e)
         {
-            ServerConn.SafeAdd(this.Username.Text, this.Password.Text);
+            ServerConn.SpAdd(this.Username.Text, this.Password.Text);
 
             this.Username.Text = string.Empty;
             this.Password.Text = string.Empty;

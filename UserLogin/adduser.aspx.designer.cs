@@ -10,7 +10,7 @@
 namespace UserLogin {
     
     
-    public partial class index {
+    public partial class AddUser {
         
         /// <summary>
         /// form1 control.

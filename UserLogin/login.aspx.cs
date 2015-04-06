@@ -5,13 +5,7 @@
 namespace UserLogin
 {
     using System;
-    using System.Collections.Generic;
     using System.Collections.Specialized;
-    using System.Linq;
-    using System.Net;
-    using System.Web;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
     using App_Code.ServerConn;
 
     /// <summary>
@@ -27,12 +21,12 @@ namespace UserLogin
         protected void Page_Load(object sender, EventArgs e)
         {
             NameValueCollection nvc = Request.Form;
-            if (nvc.Count>1)
+            if (nvc.Count > 1)
             {
-            if (ServerConn.Authenticated(nvc["username"], nvc["password"]))
+            if (ServerConn.SpAuth(nvc["username"], nvc["password"]))
             {
-                    postresults.InnerHtml = "<h1> Authenticated!</h1>";
-                    DivHash.InnerText = ServerConn.MyQuery("Select * from systemusers where username=" + nvc["username"].ToString() + ";").ToString();
+                    this.postresults.InnerHtml = "<h1> Authenticated!</h1>";
+                    this.DivHash.InnerText = ServerConn.MyQuery("Select * from systemusers where username=" + nvc["username"].ToString() + ";").ToString();
             }
             }
         }

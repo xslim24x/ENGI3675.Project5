@@ -49,7 +49,115 @@ namespace UserLogin.App_Code.ServerConn
         }
 
         /// <summary>
-        /// Function utilizing a prepared query to insert data into database
+        /// Use the stored procedure to add users to the system
+        /// the database will handle encrypting the password
+        /// </summary>
+        /// <param name="name">plaintext username</param>
+        /// <param name="password">plaintext password but will be stored as a md5 hash</param>
+        public static void SpAdd(string name, string password)
+        {
+            using (NpgsqlConnection conn = new NpgsqlConnection(
+                            "Server=127.0.0.1; Port=5432; Database=Assignment5; Integrated Security=true;"))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT addUser(:username,:plaintext);";
+                    NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
+
+                    cmd.Parameters.Add(
+                        new NpgsqlParameter("username", NpgsqlTypes.NpgsqlDbType.Text) { Value = name });
+
+                    cmd.Parameters.Add(
+                        new NpgsqlParameter("plaintext", NpgsqlTypes.NpgsqlDbType.Text) { Value = password });
+
+                    NpgsqlDataReader dr = cmd.ExecuteReader();
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e);
+                }
+            }
+        }
+
+        // Not Used anymore but this is how to do it safely:
+        /*
+        public static void SafeSpAdd(string name, string password)
+        {
+            using (NpgsqlConnection conn = new NpgsqlConnection(
+                            "Server=127.0.0.1; Port=5432; Database=Assignment5; Integrated Security=true;"))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT addUser(:username,:hashedpass);";
+                    NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
+
+                    cmd.Parameters.Add(
+                        new NpgsqlParameter("username", NpgsqlTypes.NpgsqlDbType.Text) { Value = name });
+
+                    MD5 crypter = MD5.Create();
+
+                    byte[] hashed = crypter.ComputeHash(System.Text.Encoding.Default.GetBytes(password));
+
+                    cmd.Parameters.Add(
+                        new NpgsqlParameter("hashedpass", NpgsqlTypes.NpgsqlDbType.Bytea) { Value = hashed });
+
+                    NpgsqlDataReader dr = cmd.ExecuteReader();
+
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e);
+                }
+            }
+        }
+         * */
+
+        /// <summary>
+        /// Stored procedure is called to search for user and verify password
+        /// </summary>
+        /// <param name="name">username of login attempt</param>
+        /// <param name="password">md5 hash of password as a hex string</param>
+        /// <returns>POSTGRESQL will return a boolean informing if user/hash combo is correct</returns>
+        public static bool SpAuth(string name, string password)
+        {
+            using (NpgsqlConnection conn = new NpgsqlConnection(
+                "Server=127.0.0.1; Port=5432; Database=Assignment5; Integrated Security=true;"))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Authenticate(:user,:hashedpass);";
+                    NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.Add(
+                        new NpgsqlParameter("user", NpgsqlTypes.NpgsqlDbType.Text) { Value = name });
+
+                    byte[] hashed = new byte[16];
+                    for (int i = 0; i < 32; i += 2)
+                    {
+                        hashed[i / 2] = Convert.ToByte(password.Substring(i, 2), 16);                    
+                    }
+
+                    cmd.Parameters.Add(
+                       new NpgsqlParameter("hashedpass", NpgsqlTypes.NpgsqlDbType.Bytea) { Value = hashed });
+                    NpgsqlDataReader dr = cmd.ExecuteReader();
+                    
+                    DataTable dt = new DataTable();
+                    dt.Load(dr);
+                    return (bool)dt.Rows[0][0];
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e);
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Old user addition using parameters instead of stored procedure
         /// </summary>
         /// <param name="name">  Creating Username </param>
         /// <param name="password"> Creating password </param>
@@ -86,11 +194,11 @@ namespace UserLogin.App_Code.ServerConn
         }
 
         /// <summary>
-        /// Authentication method . 
+        /// Old Authentication method . 
         /// </summary>
         /// <param name="name"> Authenticating Username</param>
         /// <param name="password"> Authenticating Password</param>
-        /// <returns> String name and String Password</returns>
+        /// <returns> Boolean if Name and password combo is valid</returns>
         public static bool Authenticated(string name, string password)
         {
             using (NpgsqlConnection conn = new NpgsqlConnection(
@@ -111,7 +219,7 @@ namespace UserLogin.App_Code.ServerConn
                     string shouldbethis = BitConverter.ToString((byte[])dt.Rows[0]["hashedpass"]).Replace("-", string.Empty);
 
                     if (shouldbethis.Equals(password.ToUpper()))
-                    { 
+                    {
                         return true;
                     }
                 }
