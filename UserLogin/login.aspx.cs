@@ -13,21 +13,21 @@ namespace UserLogin
     /// </summary>
     public partial class Login : System.Web.UI.Page
     {
-       /// <summary>
-       /// Protected void Page_Load 
-       /// </summary>
-       /// <param name="sender"> Object Sender</param>
-       /// <param name="e"> EventArgs e</param>
+        /// <summary>
+        /// Protected void Page_Load 
+        /// </summary>
+        /// <param name="sender"> Object Sender</param>
+        /// <param name="e"> EventArgs e</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             NameValueCollection nvc = Request.Form;
             if (nvc.Count > 1)
             {
-            if (ServerConn.SpAuth(nvc["username"], nvc["password"]))
-            {
+                if (ServerConn.SpAuth(nvc["username"], nvc["password"]))
+                {
                     this.postresults.InnerHtml = "<h1> Authenticated!</h1>";
                     this.DivHash.InnerText = ServerConn.MyQuery("Select * from systemusers where username=" + nvc["username"].ToString() + ";").ToString();
-            }
+                }
             }
         }
     }
